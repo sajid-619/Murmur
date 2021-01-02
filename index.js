@@ -3,7 +3,10 @@ const graphql = require("graphql-tag");
 const mongoose = require("mongoose");
 
 const Post = require("./models/Post");
-const MONGODB = require("./config");
+const { MONGODB } = require("./config.js");
+
+const PORT = process.env.port || 5000;
+
 
 const typeDefs = graphql`
 
